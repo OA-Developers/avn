@@ -479,7 +479,7 @@
                                 <select class="form-control" name="popup_id">
                                     <option value="">{{__('Label.Select Popup')}}</option>
                                     @foreach ($popups as $popup)
-                                    <option value="{{ $popup->id }}">
+                                    <option value="{{ $popup->id }}" {{ $result->popup_id == $popup->id ? 'selected' : '' }}>
                                         {{ $popup->age }}
                                     </option>
                                     @endforeach
