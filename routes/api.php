@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\ChannelController;
 use App\Http\Controllers\Api\HomeController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Admin\PopupController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -60,3 +61,5 @@ Route::post('update_profile', [UserController::class, 'update_profile']);
 Route::post('image_upload', [UserController::class, 'image_upload']);
 Route::post('get_tv_login_code', [UserController::class, 'get_tv_login_code']);
 Route::post('tv_login', [UserController::class, 'tv_login']);
+
+Route::get('/popup/{id}', [PopupController::class, 'getById']);
